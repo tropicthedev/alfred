@@ -1,4 +1,4 @@
-package com.tropicoss;
+package com.tropicoss.alfred;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 

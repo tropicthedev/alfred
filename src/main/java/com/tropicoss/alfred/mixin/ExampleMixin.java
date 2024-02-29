@@ -1,4 +1,4 @@
-package com.tropicoss.mixin;
+package com.tropicoss.alfred.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
