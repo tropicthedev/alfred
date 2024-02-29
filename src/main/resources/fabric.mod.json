@@ -16,7 +16,7 @@
 	"environment": "server",
 	"entrypoints": {
 		"server": [
-			"com.tropicoss.Alfred"
+			"com.tropicoss.alfred.Alfred"
 		]
 	},
 	"mixins": [
