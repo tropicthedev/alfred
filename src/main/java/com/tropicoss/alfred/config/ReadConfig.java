@@ -12,7 +12,7 @@ public class ReadConfig {
     public AppConfig loadConfig() {
         try {
             // Specify the path to your YAML file
-            String filePath = Alfred.fabricLoader.getConfigDir().resolve("alfred-config.yml").toString();
+            String filePath = Alfred.fabricLoader.getConfigDir().resolve("alfred/alfred-config.yml").toString();
 
             // Create ObjectMapper with YAMLFactory
             ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
