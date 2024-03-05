@@ -17,7 +17,7 @@ public class DatabaseManager {
     public DatabaseManager() throws SQLException {
     }
 
-    private checkDatabaseTables() throws SQLException {
+    private void checkDatabaseTables() throws SQLException {
         DatabaseMetaData metaData = connection.getMetaData();
 
 
