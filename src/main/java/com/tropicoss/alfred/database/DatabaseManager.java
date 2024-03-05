@@ -8,11 +8,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseManager {
-    private final Connection connection = DriverManager.getConnection(
-            String.format("jdbc:sqlite:%s",
-                    Alfred.fabricLoader.getConfigDir().resolve("alfred/alfred.db")
-            )
-    );
+    private Connection connection;
 
     public DatabaseManager() throws SQLException {
     }
@@ -22,4 +18,21 @@ public class DatabaseManager {
 
 
     }
+
+    public Connection getConnection() {
+        if (connection == null) {
+            try {
+                this.connection = DriverManager.getConnection(
+                        String.format("jdbc:sqlite:%s",
+                                Alfred.fabricLoader.getConfigDir().resolve("alfred/alfred.db")
+                        )
+                );
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+        return this.connection;
+    }
+
 }
